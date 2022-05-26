@@ -1,0 +1,63 @@
+<div id="m_upload_docExtra" class="modal" data-esc xmlns="http://www.w3.org/1999/html">
+    <form class="modal-content-dialog w-50 h-60 modalScrollY" id="frmModalDocExtra" enctype="multipart/form-data">
+        <div class="container-dialog w-100 h-100">
+            <span name="btnFecharModalDocExtra" class="close" title="Fecha dialogo">&times;</span>
+            <div class="modal-header-dialog">
+                <h1>Documentação Extra</h1>
+                <hr style="border-top: 1px solid black;"/>
+            </div>
+            <div class="campo col-12 m-3">
+                <div class="rotulo">
+                    <label for="tipoDocExtra">Tipo:</label>
+                </div>
+                <div class="controle">
+                    <select id="tipoDocExtra" name="tipoDocExtra" required/>
+                        <option value="" >Selecione...</option>
+                        <option value="1">Desenho Técnico</option>
+                        <option value="2">Esboço</option>
+                   </select>
+                </div>
+                <div class="mensagem"></div>
+            </div>
+            <div class="col-12">
+                <div class="rotulo mt-3 w-100">
+                    <label>Documentação extra para anexar ao Edital:</label>
+                </div>
+                <div class="controle d-flex flex-row" id="divInputArquivos">
+                    <table class="table table-striped table-bordered table-hover tab" id="tblArquivos">
+                        <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Ações</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-id_anexo_extra="0">
+                                <td class="d-flex flex-row justify-content-around">
+                                   <span class="btn fileinput-button d-flex ">
+                                    <span><i class="fa fa-2x fa-folder-open-o" aria-hidden="true"></i></span>
+                                        <input type="file" name="arqDocExtra[]"  accept=".zip,.pdf"/>
+                                    </span>
+                                   <input type="text" class="w-75" name="visualizaArquivoDocExtra" readonly>
+                                </td>
+                                <td>
+                                    <button type="button" name="btnExcluirArquivoDocExtra" class="btn disabled" disabled="disabled" >
+                                        <i aria-hidden="true" class="fa fa-2x fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="w-100 d-inline-flex justify-content-between align-items-center">
+                                    <button type="button" class="add w-25" title="add" id="btnAdicionaArquivoDocExtra"></button><span class="w-75">Adicionar mais arquivos</span>
+                                </td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="botoes mt-3">
+                <button type="button" class="confirmacao" id="btnConfirmarDocExtra">Confirmar seleção</button>
+                <button type="button" class="cancel" name="btnFecharModalDocExtra">Cancelar Operação</button>
+            </div>
+        </div>
+    </form>
+</div>
